@@ -74,3 +74,8 @@ sudo apt install zsh -y
 chsh -s $(which zsh) #no root
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 cp .zshrc ~/.zshrc
+
+#postman
+sudo snap install postman
+
+
