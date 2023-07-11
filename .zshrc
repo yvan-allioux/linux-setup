@@ -3,7 +3,7 @@
 
 #dl https://github.com/zsh-users/zsh-autosuggestions
 #git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-source ~/.zsh/zsh-autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 setopt autocd              # change directory just by typing its name
@@ -246,7 +246,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -lHX --color=auto'
+alias ll='ls -lHXa --color=auto'
 alias la='ls -A'
 alias l='ls -CF'
 
