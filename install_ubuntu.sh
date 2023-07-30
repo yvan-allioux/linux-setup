@@ -5,16 +5,18 @@ sudo apt upgrade -y
 
 #curl
 sudo apt install curl -y
+
 #git
 sudo apt install git -y
+
 #vim
 sudo apt install vim -y
+
 #micro
 curl https://getmic.ro | bash
 sudo mv ./micro /usr/bin
 
 #Vscode
-
 sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
@@ -25,7 +27,6 @@ sudo apt update
 sudo apt install code
 
 #brave
-
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
@@ -47,27 +48,30 @@ sudo add-apt-repository ppa:trebelnik-stefina/grub-customizer -y
 sudo apt update
 sudo apt install grub-customizer -y
 
-#lazydocker
-#https://github.com/jesseduffield/lazydocker
-#lazydocker_0.20.0_Linux_x86_64
+#lazydocker       https://github.com/jesseduffield/lazydocker/releases/
+
+#wget https://github.com/jesseduffield/lazydocker/releases/download/v0.21.0/lazydocker_0.21.0_Linux_x86_64.tar.gz
+#tar -xvf lazydocker_*.tar.gz
 #sudo mv ./lazydocker /usr/bin
+#chmod +x /usr/bin/lazydocker
+#rm lazydocker_*.tar.gz LICENSE README.md
 
 
 #docker
 sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 apt-cache policy docker-ce
 sudo apt install docker-ce -y
-
 sudo usermod -aG docker ${USER}
 sudo su - ${USER}
+#docker --version
 
 #Docker Compose
-
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+#docker-compose --version
 
 #zsh
 sudo apt install zsh -y
@@ -77,5 +81,17 @@ cp .zshrc ~/.zshrc
 
 #postman
 sudo snap install postman
+
+#librecad
+#AppImage on the website
+sudo apt install libfuse2 -y
+
+sudo echo "[Desktop Entry]
+Name=FreeCAD
+Exec=/home/yvan/Documents/appimage/FreeCAD_0.20.2-2022-12-27-conda-Linux-x86_64-py310.AppImage
+Icon=FreeCAD
+Type=Application
+Categories=GNOME" | sudo tee /usr/share/applications/FreeCAD.desktop
+
 
 
