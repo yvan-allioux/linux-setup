@@ -5,15 +5,18 @@
 #git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-#install for root
+#install for root ??
 #sudo su
 #chsh -s /bin/zsh root
-#ln -s $HOME/.zsh/zshrc /root/.zshrc
-#ln -s $HOME/.zsh/.oh-my-zsh /root/.oh-my-zsh
-#ln -s ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh /root/.zsh/zsh-autosuggestions.zsh
+#chsh -s $(which zsh) $(whoami)
+#sudo ln -s $HOME/.zsh /root/.zsh
+#ln -s $HOME/.zshrc /root/.zshrc
+#ln -s $HOME/.oh-my-zsh /root/.oh-my-zsh
+
 #si besoin :
-#ln -s $HOME/.zsh/zshenv /root/.zshenv
-#ln -s $HOME/.zsh/zprofile /root/.zprofile
+#ln -s ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh /root/.zsh/zsh-autosuggestions.zsh
+#ln -s $HOME/.zshenv /root/.zshenv
+#ln -s $HOME/.zprofile /root/.zprofile
 
 
 setopt autocd              # change directory just by typing its name
@@ -278,4 +281,4 @@ function cs () {
 
 alias updateupgrade="yes | sudo apt update ; yes | sudo apt upgrade"
 
-alias cls="ls -l | awk   '{k=0;for(i=0;i<=8;i++)k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(\"%0o \",k);print}'"
+alias cls="ls -lhXa | awk   '{k=0;for(i=0;i<=8;i++)k+=((substr(\$1,i+2,1)~/[rwx]/)*2^(8-i));if(k)printf(\"%0o \",k);print}'"
