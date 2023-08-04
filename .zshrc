@@ -5,6 +5,16 @@
 #git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+#install for root
+#sudo su
+#chsh -s /bin/zsh root
+#ln -s $HOME/.zsh/zshrc /root/.zshrc
+#ln -s $HOME/.zsh/.oh-my-zsh /root/.oh-my-zsh
+#ln -s ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh /root/.zsh/zsh-autosuggestions.zsh
+#si besoin :
+#ln -s $HOME/.zsh/zshenv /root/.zshenv
+#ln -s $HOME/.zsh/zprofile /root/.zprofile
+
 
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
@@ -99,7 +109,7 @@ fi
 configure_prompt() {
     prompt_symbol=🦎
     # Skull emoji for root terminal
-    #[ "$EUID" -eq 0 ] && prompt_symbol=💀
+    [ "$EUID" -eq 0 ] && prompt_symbol=💀
     case "$PROMPT_ALTERNATIVE" in
         twoline)
             PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)─}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B%F{%(#.red.blue)}%n'$prompt_symbol$'%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
@@ -246,7 +256,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -lHXa --color=auto'
+alias ll='ls -lhXa --color=auto'
 alias la='ls -A'
 alias l='ls -CF'
 
