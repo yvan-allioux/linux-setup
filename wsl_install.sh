@@ -2,19 +2,26 @@
 
 #sudo apt update ; sudo apt upgrade -y ; sudo apt install git -y
 #git clone https://github.com/yvan-allioux/linux-setup
-#cd linux-setup
-#chmod +x wsl_install.sh
+#cd linux-setup ; chmod +x wsl_install.sh
 #./wsl_install.sh
+
+echo "---update---"
 
 #curl
 sudo apt install curl -y
 
+echo "---vim---"
+
 #vim
 sudo apt install vim -y
+
+echo "---micro---"
 
 #micro
 curl https://getmic.ro | bash
 sudo mv ./micro /usr/bin
+
+echo "---docker---"
 
 #docker
 sudo apt update
@@ -26,10 +33,13 @@ sudo apt install docker-ce -y
 sudo usermod -aG docker ${USER}
 sudo su - ${USER}
 
+echo "---docker compose---"
+
 #Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+echo "---zsh---"
 
 #zsh
 sudo apt install zsh -y
