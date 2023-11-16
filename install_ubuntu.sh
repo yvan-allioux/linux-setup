@@ -94,4 +94,17 @@ Type=Application
 Categories=GNOME" | sudo tee /usr/share/applications/FreeCAD.desktop
 
 
-
+#intelij
+#Téléchargez l'édition que vous souhaitez https://www.jetbrains.com/idea/download/?section=linux#section=linux
+#unzip
+sudo tar -zxvf ideaIU-*.tar.gz -C /opt/
+#launch first time, make a shortcut if posible
+#/opt/idea*/bin/idea.sh
+#racourci
+#Lancez IntelliJ IDEA
+#Une fois IntelliJ IDEA lancé, allez dans le menu "Tools" (Outils).
+#Sélectionnez "Create Desktop Entry..." (Créer une entrée de bureau...).
+#Une boîte de dialogue s'ouvrira. Cochez la case "Create the entry for all users"
+#(Créer l'entrée pour tous les utilisateurs) si vous voulez que le raccourci soit
+#accessible à tous les utilisateurs du système. Sinon, laissez-le décoché pour
+#le créer seulement pour votre utilisateur.
