@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#sudo apt update ; sudo apt upgrade -y ; sudo apt install git -y
+#sudo apt update ; sudo apt upgrade -y ; sudo apt install git vim curl zsh -y
 #git clone https://github.com/yvan-allioux/linux-setup
 #cd linux-setup ; chmod +x wsl_install.sh
 #./wsl_install.sh
@@ -43,6 +43,7 @@ echo "---zsh---"
 
 #zsh
 sudo apt install zsh -y
+#launch one time zsh to create .zshrc
 chsh -s $(which zsh) #no root
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 cp .zshrc ~/.zshrc
