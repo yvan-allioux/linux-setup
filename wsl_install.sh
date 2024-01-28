@@ -46,7 +46,10 @@ sudo apt install zsh -y
 #launch one time zsh to create .zshrc
 chsh -s $(which zsh) #no root
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-cp .zshrc ~/.zshrc
+curl https://raw.githubusercontent.com/yvan-allioux/linux-setup/main/.zshrc > ~/.zshrc
+
+
+
 
 docker run -d --network=host --add-host=host.docker.internal:host-gateway -v ollama-webui:/app/backend/data -e OLLAMA_API_BASE_URL=http://localhost:11434/api --name ollama-webui --restart always ghcr.io/ollama-webui/ollama-webui:main
 docker run -d --network=host -v ollama-webui:/app/backend/data -e OLLAMA_API_BASE_URL=http://127.0.0.1:11434/api --name ollama-webui --restart always ghcr.io/ollama-webui/ollama-webui:main
