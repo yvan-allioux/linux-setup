@@ -47,8 +47,16 @@ sudo apt install zsh -y
 chsh -s $(which zsh) #no root
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
-#curl -o ~/.zsh/zsh-autosuggestions.zsh https://raw.githubusercontent.com/zsh-users/zsh-autosuggestions/master/zsh-autosuggestions.zsh
-#curl -o ~/.zsh/zsh-syntax-highlighting.zsh https://raw.githubusercontent.com/zsh-users/zsh-syntax-highlighting/master/zsh-syntax-highlighting.zsh
+
+#si on a pas la posibilité de faire des git clone
+#cd
+#cd Download
+#unzip zsh-syntax-highlighting-master.zip
+#unzip zsh-autosuggestions-master.zip
+#mv zsh-autosuggestions-master ~/.zsh/zsh-autosuggestions
+#mv zsh-syntax-highlighting-master ~/.zsh/zsh-syntax-highlighting
+#rm zsh-syntax-highlighting-master.zip
+#rm zsh-autosuggestions-master.zip
 
 curl https://raw.githubusercontent.com/yvan-allioux/linux-setup/main/.zshrc > ~/.zshrc
 
