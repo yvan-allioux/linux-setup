@@ -32,6 +32,7 @@ apt-cache policy docker-ce
 sudo apt install docker-ce -y
 sudo usermod -aG docker ${USER}
 sudo su - ${USER}
+#chsh -s /usr/bin/zsh parfois il faut redemarer le pc
 
 echo "---docker compose---"
 
