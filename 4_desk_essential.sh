@@ -1,3 +1,5 @@
+#launch this script from github
+#wget  -q -O - https://raw.githubusercontent.com/yvan-allioux/linux-setup/main/4_desk_essential.sh | bash
 
 #Vscode
 sudo apt-get install wget gpg
