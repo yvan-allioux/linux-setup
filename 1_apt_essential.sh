@@ -18,6 +18,7 @@ curl https://getmic.ro | bash
 sudo mv ./micro /usr/bin
 
 #zsh setup
+sudo apt install zsh -y
 chsh -s $(which zsh) #no root
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
