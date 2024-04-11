@@ -1,3 +1,11 @@
+#ubuntu param
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+
+mkdir wallpaper && cd wallpaper
+wget https://raw.githubusercontent.com/yvan-allioux/linux-setup/main/wallpaper/cyberpunk-2077-samurai-logo2.png
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/'$USER'/wallpaper/cyberpunk-2077-samurai-logo2.png'
+cd
+
 #launch this script from github
 #wget  -q -O - https://raw.githubusercontent.com/yvan-allioux/linux-setup/main/4_desk_essential.sh | bash
 
