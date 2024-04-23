@@ -1,6 +1,8 @@
 #launch this script from github
 #wget  -q -O - https://raw.githubusercontent.com/yvan-allioux/linux-setup/main/1_apt_essential.sh | bash
 
+#sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y
+
 sudo apt update
 sudo apt upgrade -y
 
