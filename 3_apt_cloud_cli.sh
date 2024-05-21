@@ -22,4 +22,4 @@ unzip awscliv2.zip
 sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
 rm awscliv2.zip
 rm -r aws
-
+aws --version
