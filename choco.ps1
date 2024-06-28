@@ -10,4 +10,6 @@ choco install micro
 choco install vim
 choco install dolphin
 choco install drawio
+choco install bitwarden -y
+choco install postman
 
