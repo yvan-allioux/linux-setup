@@ -15,6 +15,9 @@ sudo apt install git -y
 #vim
 sudo apt install vim -y
 
+#github 
+#sudo apt install gh -y
+
 #micro
 curl https://getmic.ro | bash
 sudo mv ./micro /usr/bin
