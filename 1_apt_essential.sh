@@ -9,6 +9,9 @@ sudo apt update && sudo apt upgrade -y
 #curl git vim
 sudo apt install curl git vim -y
 
+#github 
+#sudo apt install gh -y
+
 #micro
 curl https://getmic.ro | bash
 sudo mv ./micro /usr/bin

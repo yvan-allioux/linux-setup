@@ -12,4 +12,5 @@ choco install dolphin
 choco install drawio
 choco install bitwarden -y
 choco install postman
+choco install gh
 
