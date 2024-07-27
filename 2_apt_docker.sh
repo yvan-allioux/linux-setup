@@ -1,3 +1,4 @@
+#!/bin/bash
 #launch this script from github
 #wget  -q -O - https://raw.githubusercontent.com/yvan-allioux/linux-setup/main/2_apt_docker.sh | bash
 

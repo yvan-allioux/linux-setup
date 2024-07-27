@@ -1,3 +1,4 @@
+#!/bin/bash
 #launch this script from github
 #wget  -q -O - https://raw.githubusercontent.com/yvan-allioux/linux-setup/main/3_apt_cloud_cli.sh | bash
 
