@@ -13,4 +13,5 @@ choco install drawio
 choco install bitwarden -y
 choco install postman
 choco install gh
+choco install obsidian
 
